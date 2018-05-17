@@ -29,5 +29,5 @@ pip -r requirements.txt
 To train the classifier, run:
 
 ```
-python color-classifier.py
+python color_classifier.py
 ```
