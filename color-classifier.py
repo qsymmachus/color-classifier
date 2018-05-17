@@ -1,8 +1,10 @@
 import pandas as pd
+import numpy as np
 from colour import Color
 
-def import_data():
-    color_data = pd.read_csv("color-data.csv")
+def import_data(csv_path="color-data.csv"):
+    color_data = pd.read_csv(csv_path)
+    color_data = color_data.reindex(np.random.permutation(color_data.index))
     return color_data
 
 def normalize_data(color_data):
